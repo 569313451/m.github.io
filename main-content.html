@@ -1,0 +1,136 @@
+<div class="container">
+  <div class="tabs-container">
+    <div class="tabs">
+      <button class="tab active" data-target="#notepad-tab">NOTEPAD</button>
+      <button class="tab" data-target="#counter-tab">CHARACTER COUNTER</button>
+      <button class="tab" data-target="#accounting-tab">ACCOUNTING</button>
+    </div>
+
+    <div id="notepad-tab" class="tab-content active">
+      <div class="tool-section">
+        <h2>NOTEPAD</h2>
+        <div class="notepad-container">
+          <div class="notes-list">
+            <ul id="notes-list"></ul>
+            <button id="new-note" class="btn btn-primary">新笔记</button>
+          </div>
+          <div class="note-editor">
+            <input type="text" id="note-title" placeholder="笔记标题" class="note-title-input" />
+            <textarea id="note-content" placeholder="在这里写下您的笔记..." class="note-content-textarea"></textarea>
+            <div class="notepad-buttons">
+              <button id="save-note" class="btn btn-primary">
+                保存笔记
+              </button>
+              <button id="delete-note" class="btn btn-danger">
+                删除笔记
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="counter-tab" class="tab-content">
+      <div class="tool-section">
+        <h2>CHARACTER COUNTER</h2>
+        <div class="counter-container">
+          <textarea id="counter-textarea" placeholder="在此处输入或粘贴您的文本..."
+            class="counter-textarea"></textarea>
+          <div class="stats-grid">
+            <!-- <div class="stat-card">
+              <h3>字数</h3>
+              <p class="stat-value" id="word-count">0</p>
+            </div> -->
+            <div class="stat-card">
+              <h3>字符数</h3>
+              <p class="stat-value" id="char-count">0</p>
+            </div>
+            <div class="stat-card">
+              <h3>段落数</h3>
+              <p class="stat-value" id="paragraph-count">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="accounting-tab" class="tab-content">
+      <div class="tool-section">
+        <h2>ACCOUNTING</h2>
+        <div class="accounting-container">
+          <form id="entry-form" class="entry-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entry-date">日期</label>
+                <input type="date" id="entry-date" required />
+              </div>
+              <div class="form-group">
+                <label for="entry-description">描述</label>
+                <input type="text" id="entry-description" placeholder="例如：购物" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="entry-amount">金额</label>
+                <input type="number" id="entry-amount" placeholder="金额" step="0.01" required />
+              </div>
+              <div class="form-group">
+                <label for="entry-type">类型</label>
+                <select id="entry-type">
+                  <option value="income">收入</option>
+                  <option value="expense">支出</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="entry-category">类别</label>
+                <select id="entry-category">
+                  <option value="food">食物</option>
+                  <option value="transport">交通</option>
+                  <option value="shopping">购物</option>
+                  <option value="entertainment">娱乐</option>
+                  <option value="bills">账单</option>
+                  <option value="health">健康</option>
+                  <option value="education">教育</option>
+                  <option value="other">其他</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              添加条目
+            </button>
+          </form>
+
+          <div class="entries-list">
+            <h3>最近条目</h3>
+            <ul id="entries-list-ul"></ul>
+          </div>
+
+          <div class="summary">
+            <div class="summary-card">
+              <h3>总收入</h3>
+              <p class="summary-value" id="total-income">￥0.00</p>
+            </div>
+            <div class="summary-card">
+              <h3>总支出</h3>
+              <p class="summary-value" id="total-expense">￥0.00</p>
+            </div>
+            <div class="summary-card">
+              <h3>余额</h3>
+              <p class="summary-value" id="balance">￥0.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <h3>开发笔记</h3>
+    <p>
+      此页面收集了一些小巧实用的网络工具。每个工具都设计得简单、高效，并可直接从您的浏览器访问。该项目旨在为常见的开发和日常任务提供快速实用程序，无需复杂的安装。
+    </p>
+    <p>
+      未来的计划包括添加更多工具、改进现有工具以及增强整体用户体验。欢迎提出建议和贡献！
+    </p>
+  </div>
+</div>
